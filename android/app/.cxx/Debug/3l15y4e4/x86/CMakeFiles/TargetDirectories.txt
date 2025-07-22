@@ -1,0 +1,2 @@
+/Users/apple/development/flutter projects/Shopping-App/android/app/.cxx/Debug/3l15y4e4/x86/CMakeFiles/edit_cache.dir
+/Users/apple/development/flutter projects/Shopping-App/android/app/.cxx/Debug/3l15y4e4/x86/CMakeFiles/rebuild_cache.dir
