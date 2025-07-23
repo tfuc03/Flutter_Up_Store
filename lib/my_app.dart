@@ -1,8 +1,10 @@
+import 'package:e_commerce/firebaseTestPage.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'bindings/bindings.dart';
 import 'features/authentication/screens/onboarding/onboarding.dart';
 
 
@@ -18,12 +20,14 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: UAppTheme.lightTheme,
       darkTheme: UAppTheme.darkTheme,
+      initialBinding: UBindings(),
       home: Scaffold(
         backgroundColor: UColors.primary,
         body: Center(
-          child: CircularProgressIndicator(color: UColors.white,)
+          child: CircularProgressIndicator(color: UColors.white),
         ),
       ),
+     
     );
   }
 }

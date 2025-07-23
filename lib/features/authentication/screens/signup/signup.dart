@@ -5,12 +5,16 @@ import 'package:e_commerce/features/authentication/screens/signup/widgets/signup
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../controllers/signup/signup_controller.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignUpController());
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -41,5 +45,3 @@ class SignupScreen extends StatelessWidget {
     );
   }
 }
-
-

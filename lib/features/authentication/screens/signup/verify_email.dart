@@ -1,5 +1,6 @@
 import 'package:e_commerce/common/style/padding.dart';
 import 'package:e_commerce/common/widgets/button/elevated_button.dart';
+import 'package:e_commerce/features/authentication/controllers/signup/verify_email_controller.dart';
 import 'package:e_commerce/features/authentication/screens/login/login.dart';
 import 'package:e_commerce/utils/constants/images.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
@@ -12,10 +13,13 @@ import 'package:get/get.dart';
 import '../../../../common/widgets/screens/success_screen.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+  const VerifyEmailScreen({super.key, this.email});
+
+final String? email;
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(VerifyEmailController());
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -35,7 +39,7 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(height: USizes.spaceBtwItems),
 
               /// Email
-              Text('unknowpro@gmail.com', style: Theme.of(context).textTheme.bodyMedium),
+              Text(email ?? '', style: Theme.of(context).textTheme.bodyMedium),
               SizedBox(height: USizes.spaceBtwItems),
 
               /// SubTitle

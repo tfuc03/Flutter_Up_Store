@@ -7,10 +7,11 @@ class OnBoardingController extends GetxController{
   static OnBoardingController get instance => Get.find();
 
 
+  final storage = GetStorage();
+
   /// Variables
   final pageController = PageController();
   RxInt currentIndex = 0.obs;
-  final storage = GetStorage();
 
   /// Update current index when page scroll
   void updatePageIndicator(index) {
